@@ -10,6 +10,8 @@
 <body>
   <div id="app">
     <input type="text" @keyup.enter="alertMe" v-model="alertMsg">
+    <!-- .enter define which key to consider -->
+    <!-- https://br.vuejs.org/v2/guide/events.html#Key-Codes -->
   </div>
   <script>
     new Vue({
