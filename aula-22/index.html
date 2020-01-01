@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aula 21</title>
+    <title>Aula 22</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
   <div id="app">
-    <p @mousemove="changeCoordinates">
-      Coordenadas: {{ x }} / {{ y }}
-      - <span @mousemove.stop>DEAD SPOT</span>
-      <!-- .stop === event.stopPropagation() -->
-    </p>
+    <input type="text" @keyup.enter="alertMe" v-model="alertMsg">
   </div>
   <script>
     new Vue({
       el: '#app',
       data: () => ({
-        x: 0,
-        y: 0,
+        alertMsg: '',
       }),
       methods: {
-        changeCoordinates(event) {
-          this.x = event.clientX;
-          this.y = event.clientY;
+        alertMe() {
+          alert(`Mensagem: ${ this.alertMsg }`);
         }
       }
     });
