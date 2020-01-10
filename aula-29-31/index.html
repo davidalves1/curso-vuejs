@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aulas 29 e 30</title>
+    <title>Aulas 29 e 31</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
       .container {
@@ -39,7 +39,7 @@
     <div class="container">
       <div :class="dynamic" @click="attachRed = !attachRed"></div>
       <div class="item" @click="attachGreen = !attachGreen"></div>
-      <div class="item" :style="myStyle" @click="attachBlue = !attachBlue"></div>
+      <div class="item" :style="myStyle"></div>
       <input type="text" v-model="color" placeholder="color">
       <input type="text" v-model="width" placeholder="width">
     </div>
